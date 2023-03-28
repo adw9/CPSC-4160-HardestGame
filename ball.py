@@ -49,4 +49,9 @@ class Ball():
     def ball_reset(self):
         self.ballPos = self.ballX, self.ballY = 350, 250
         self.gameRect = pygame.Rect(self.ballX, self.ballY, self.rectWidth, self.rectHeight)
+    
+    
+    def setStartPos(self, x, y):
+        self.ballX = x
+        self.ballY = y
         
