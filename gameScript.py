@@ -13,6 +13,11 @@ u1 = Player()
 controller = mainController()
 ball = Ball()
 
+obstacles = []
+
+obstacles.append(Ball())
+
+
 
 #game Loop
 while True:
