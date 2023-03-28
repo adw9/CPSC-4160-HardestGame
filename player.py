@@ -1,7 +1,7 @@
 import pygame
 
 
-class Paddle():
+class Player():
     rectColor = (0,250, 0)
     rectSize = rectWidth, rectHeight = 50, 100
     rectPos = rectX, rectY = 0, 0
