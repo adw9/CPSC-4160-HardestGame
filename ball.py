@@ -54,4 +54,7 @@ class Ball():
     def setStartPos(self, x, y):
         self.ballX = x
         self.ballY = y
+
+        #update gameRect, not sure if I have to actually do this
+        self.gameRect = pygame.Rect(self.ballX, self.ballY, self.rectWidth, self.rectHeight)
         

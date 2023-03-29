@@ -15,7 +15,19 @@ ball = Ball()
 
 obstacles = []
 
-obstacles.append(Ball())
+
+#loop this for the needed number of obstacles, read from file
+for x in range(3):
+    obstacles.append(Ball())
+
+
+
+#loop this to set start pos for balls, read from file
+for x in range(3):
+    
+    obstacles[x].setStartPos(50,50)
+
+
 
 
 
