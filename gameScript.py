@@ -13,8 +13,15 @@ u1 = Player()
 controller = mainController()
 ball = Ball()
 
+
+#this stores the red balls that kill the player
 obstacles = []
 
+#this stores the start/finish zones
+startFinish = []
+
+#this stores the one/multiple tokens to collect
+tokens = []
 
 #loop this for the needed number of obstacles, read from file
 for x in range(4):
@@ -27,6 +34,17 @@ for x in range(len(obstacles)):
     
     obstacles[x].setStartPos(obstacleOffset,50)
     obstacleOffset += 100
+
+#set start/finish zones, read from file
+startX = 0
+startY = 300
+finishX = 600
+finishY = 0
+
+startFinish.append(startX)
+startFinish.append(startY)
+startFinish.append(finishX)
+startFinish.append(finishY)
 
 
 
@@ -41,5 +59,5 @@ while True:
     
     controller.userInput(u1)
     controller.collisionDetection(u1,obstacles)
-    obj.viewUpdate(u1,obstacles)   
+    obj.viewUpdate(u1,obstacles,startFinish)   
 

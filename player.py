@@ -13,7 +13,7 @@ class Player():
     
     
     def __init__(self):
-        self.rectY = 250
+        self.rectY = 400
         self.rectSpeed = .5
         self.SCREEN_HEIGHT = 400
         self.gameRect = pygame.Rect(self.rectX, self.rectY, self.rectWidth, self.rectHeight)
