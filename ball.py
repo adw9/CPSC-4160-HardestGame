@@ -32,11 +32,11 @@ class Ball():
         self.rectHeight = 10
 
     def move_ball(self):            
-
-        if(self.moveLeft):
-            self.ballX -= self.speedX
-        else:
-            self.ballX += self.speedX
+        #
+        #if(self.moveLeft):
+            #self.ballX -= self.speedX
+        #else:
+            #self.ballX += self.speedX
         
         if(self.moveDown):
             self.ballY += self.speedY

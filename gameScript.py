@@ -21,11 +21,12 @@ for x in range(3):
     obstacles.append(Ball())
 
 
-
+obstacleSize = 25
 #loop this to set start pos for balls, read from file
-for x in range(3):
+for x in range(len(obstacles)):
     
-    obstacles[x].setStartPos(50,50)
+    obstacles[x].setStartPos(obstacleSize,50)
+    obstacleSize += 50
 
 
 
@@ -39,6 +40,6 @@ while True:
             sys.exit()
     
     controller.userInput(u1)
-    controller.collisionDetection(u1,ball)
-    obj.viewUpdate(u1,ball)   
+    controller.collisionDetection(u1,obstacles)
+    obj.viewUpdate(u1,obstacles)   
 

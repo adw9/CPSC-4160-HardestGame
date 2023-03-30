@@ -13,11 +13,13 @@ class View():
       pygame.display.set_caption("PONG")
       surface = pygame.display.set_mode(self.SCREEN_SIZE)
 
-   def viewUpdate(self, u1,ball):
+   def viewUpdate(self, u1,obstacles):
       #background
       self.surface.fill(self.screenColor)
       #draw the ball
-      pygame.draw.circle(self.surface, ball.color, ball.ballPos, ball.diameter)
+      for x in range(len(obstacles)):
+         pygame.draw.circle(self.surface, obstacles[x].color, obstacles[x].ballPos, obstacles[x].diameter)
+         
       #user paddles
       pygame.draw.rect(self.surface, u1.rectColor, u1.gameRect)
    

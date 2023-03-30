@@ -28,25 +28,28 @@ class mainController():
             input = False
             u1.move_rect(input)
 
-    def collisionDetection(self, u1, ball):
-
-        if(u1.gameRect.colliderect(ball.gameRect)):
-            ball.moveLeft = False
-
-        #collision detection between ball and outside walls
-        if(ball.gameRect.colliderect(self.topWall)):
-            ball.moveDown = True
-        elif(ball.gameRect.colliderect(self.botWall)):
-            ball.moveDown = False
-        elif(ball.gameRect.colliderect(self.leftWall)):
-            
-            ball.moveLeft = False
-            ball.ball_reset()
-
-        elif(ball.gameRect.colliderect(self.rightWall)):
-            
-            ball.moveLeft = True
-            ball.ball_reset()
+    def collisionDetection(self, u1, obstacles):
+        
+        for x in range(len(obstacles)):
 
 
-        ball.move_ball()
+            if(u1.gameRect.colliderect(obstacles[x].gameRect)):
+                obstacles[x].moveLeft = False
+
+            #collision detection between obstacles[x] and outside walls
+            if(obstacles[x].gameRect.colliderect(self.topWall)):
+                obstacles[x].moveDown = True
+            elif(obstacles[x].gameRect.colliderect(self.botWall)):
+                obstacles[x].moveDown = False
+            elif(obstacles[x].gameRect.colliderect(self.leftWall)):
+                
+                obstacles[x].moveLeft = False
+                obstacles[x].ball_reset()
+
+            elif(obstacles[x].gameRect.colliderect(self.rightWall)):
+                
+                obstacles[x].moveLeft = True
+                obstacles[x].ball_reset()
+
+
+            obstacles[x].move_ball()
