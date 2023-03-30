@@ -41,15 +41,8 @@ class mainController():
                 obstacles[x].moveDown = True
             elif(obstacles[x].gameRect.colliderect(self.botWall)):
                 obstacles[x].moveDown = False
-            elif(obstacles[x].gameRect.colliderect(self.leftWall)):
-                
-                obstacles[x].moveLeft = False
-                obstacles[x].ball_reset()
 
-            elif(obstacles[x].gameRect.colliderect(self.rightWall)):
-                
-                obstacles[x].moveLeft = True
-                obstacles[x].ball_reset()
-
+            if(obstacles[x].gameRect.colliderect(u1.gameRect)):
+                u1.reset_player()
 
             obstacles[x].move_ball()
