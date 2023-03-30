@@ -2,7 +2,7 @@ import pygame
 
 
 class Player():
-    rectColor = (0,250, 0)
+    rectColor = (155,0,255)
     rectSize = rectWidth, rectHeight = 50, 50
     rectPos = rectX, rectY = 0, 0
     rectSpeed = 0

@@ -17,7 +17,7 @@ obstacles = []
 
 
 #loop this for the needed number of obstacles, read from file
-for x in range(3):
+for x in range(4):
     obstacles.append(Ball())
 
 
