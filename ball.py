@@ -1,6 +1,4 @@
 import pygame
-#aasadas
-#hit top wall, reverse y velocity. hit paddle, reverse x velocity. 
 
 
 class Ball():
@@ -46,6 +44,8 @@ class Ball():
         #update gameRect with new var
         self.ballPos = self.ballX, self.ballY
         self.gameRect = pygame.Rect(self.ballX, self.ballY, self.rectWidth, self.rectHeight)
+    
+    #this funct may be unnecesary after pong, keeping just incase
     def ball_reset(self):
         self.ballPos = self.ballX, self.ballY = 350, 250
         self.gameRect = pygame.Rect(self.ballX, self.ballY, self.rectWidth, self.rectHeight)
