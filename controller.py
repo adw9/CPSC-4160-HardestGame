@@ -16,16 +16,16 @@ class mainController():
         keys = pygame.key.get_pressed()
 
         if(keys[pygame.K_UP] and not u1.gameRect.colliderect(self.topWall)):
-            input = True
+            input = "UP"
             u1.move_rect(input)
         elif(keys[pygame.K_DOWN] and not u1.gameRect.colliderect(self.botWall)):
-            input = False
+            input = "DOWN"
             u1.move_rect(input)
         elif(keys[pygame.K_LEFT] and not u1.gameRect.colliderect(self.leftWall)):
-            input = True
+            input = "LEFT"
             u1.move_rect(input)
         elif(keys[pygame.K_RIGHT] and not u1.gameRect.colliderect(self.rightWall)):
-            input = False
+            input = "RIGHT"
             u1.move_rect(input)
 
     def collisionDetection(self, u1, obstacles):

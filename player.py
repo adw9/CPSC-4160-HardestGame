@@ -27,10 +27,14 @@ class Player():
 
 
     def move_rect(self,input):
-        if(input):
+        if(input == "UP"):
             self.rectY -= self.rectSpeed
-        else:
+        elif(input == "DOWN"):
             self.rectY += self.rectSpeed
+        elif(input == "LEFT"):
+            self.rectX -= self.rectSpeed
+        elif(input == "RIGHT"):
+            self.rectX += self.rectSpeed
             
 
         #update gameRect with new var
