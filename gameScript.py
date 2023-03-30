@@ -21,12 +21,12 @@ for x in range(4):
     obstacles.append(Ball())
 
 
-obstacleSize = 200
+obstacleOffset = 200
 #loop this to set start pos for balls, read from file
 for x in range(len(obstacles)):
     
-    obstacles[x].setStartPos(obstacleSize,50)
-    obstacleSize += 100
+    obstacles[x].setStartPos(obstacleOffset,50)
+    obstacleOffset += 100
 
 
 
