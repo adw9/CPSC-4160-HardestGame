@@ -4,9 +4,13 @@ Milestone 1 CPSC 4160
 https://github.com/adw9/CPSC-4160-HardestGame
 # Part 1: Updates to Game Document
 • The game and current development design have not updated since the original project proposal.
+
 • The Model has undergone changes to support a much wider variety of objects than anticipated.
+
 o Obstacles will be stored in a separate list from tokens and powerups
+
 o Start/finish position also will be stored in a list
+
 # Part 2: Updated Project Timeline
 Division of Labor
 Andrew Williams is the only team member on this project, so all labor will be completed alone.
