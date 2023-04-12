@@ -11,7 +11,6 @@ pygame.init()
 obj = View()
 u1 = Player()
 controller = mainController()
-ball = Ball()
 
 
 #this stores the red balls that kill the player
