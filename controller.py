@@ -28,8 +28,10 @@ class mainController():
             input = "RIGHT"
             u1.move_rect(input)
 
-    def collisionDetection(self, u1, obstacles):
+    def collisionDetection(self, u1, obstacles,startFinish,tokens):
         
+        
+
         for x in range(len(obstacles)):
 
 

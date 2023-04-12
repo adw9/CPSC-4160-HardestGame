@@ -22,15 +22,12 @@ class View():
          
 
       #start/finish squares
-      startRect = pygame.Rect(startFinish[0], startFinish[1], 100, 200)
-      pygame.draw.rect(self.surface, (0,255,0), startRect)
-
-      startRect = pygame.Rect(startFinish[2], startFinish[3], 100, 200)
-      pygame.draw.rect(self.surface, (0,255,0), startRect)
-
+      
+      pygame.draw.rect(self.surface, (0,255,0), startFinish[0])
+      pygame.draw.rect(self.surface, (0,255,0), startFinish[1])
+      
       #tokens
-      tokenRect = pygame.Rect(tokens[0],tokens[1],20,20)
-      pygame.draw.rect(self.surface,(255,255,0),tokenRect)
+      pygame.draw.rect(self.surface,(255,255,0),tokens[0])
 
 
       #user square

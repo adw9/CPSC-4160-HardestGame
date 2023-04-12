@@ -41,6 +41,10 @@ startY = 300
 finishX = 600
 finishY = 0
 
+startFinish.append(pygame.Rect(startX, startY, 100, 200))
+startFinish.append(pygame.Rect(finishX, finishY, 100, 200))
+
+
 startFinish.append(startX)
 startFinish.append(startY)
 startFinish.append(finishX)
@@ -49,8 +53,8 @@ startFinish.append(finishY)
 #set token, read from file
 tokenX = 200
 tokenY = 200
-tokens.append(tokenX)
-tokens.append(tokenY)
+tokens.append(pygame.Rect(tokenX,tokenY,20,20))
+
 
 
 
@@ -64,6 +68,6 @@ while True:
             sys.exit()
     
     controller.userInput(u1)
-    controller.collisionDetection(u1,obstacles)
+    controller.collisionDetection(u1,obstacles,startFinish,tokens)
     obj.viewUpdate(u1,obstacles,startFinish,tokens)   
 
