@@ -7,6 +7,8 @@ class Player():
     rectPos = rectX, rectY = 0, 0
     rectSpeed = 0
 
+    gotToken = False
+
     SCREEN_HEIGHT = 0
 
     gameRect = pygame.Rect(rectX, rectY, rectWidth, rectHeight)

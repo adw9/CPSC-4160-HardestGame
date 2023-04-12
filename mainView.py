@@ -27,12 +27,18 @@ class View():
       pygame.draw.rect(self.surface, (0,255,0), startFinish[1])
       
       #tokens
-      pygame.draw.rect(self.surface,(255,255,0),tokens[0])
+      for x in range(len(tokens)):
+         pygame.draw.rect(self.surface,(255,255,0),tokens[x])
 
 
       #user square
       pygame.draw.rect(self.surface, u1.rectColor, u1.gameRect)
    
       pygame.display.update()
+
+
+      #temp statement
+      if(u1.gotToken == True):
+         print("yay!")
 
 

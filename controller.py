@@ -30,7 +30,7 @@ class mainController():
 
     def collisionDetection(self, u1, obstacles,startFinish,tokens):
         
-        
+
 
         for x in range(len(obstacles)):
 
@@ -48,3 +48,9 @@ class mainController():
                 u1.reset_player()
 
             obstacles[x].move_ball()
+
+        
+        for x in range(len(tokens)):
+            if(u1.gameRect.colliderect(tokens[x])):
+                tokens.pop(x)
+                u1.gotToken = True
