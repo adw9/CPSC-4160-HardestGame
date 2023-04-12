@@ -66,3 +66,7 @@ while True:
     controller.collisionDetection(u1,obstacles,startFinish,tokens)
     obj.viewUpdate(u1,obstacles,startFinish,tokens)   
 
+    if(controller.winner == True):
+        pygame.quit() 
+        sys.exit()
+

@@ -10,6 +10,8 @@ class mainController():
     botWall = pygame.Rect(0, 500, 700, 5)
     leftWall = pygame.Rect(0,0,5,700)
     rightWall = pygame.Rect(700,0,5,700)
+
+    winner = False
     
 
     def userInput(self, u1):
@@ -31,7 +33,7 @@ class mainController():
     def collisionDetection(self, u1, obstacles,startFinish,tokens):
         
 
-
+        #manage obstacles
         for x in range(len(obstacles)):
 
 
@@ -49,8 +51,17 @@ class mainController():
 
             obstacles[x].move_ball()
 
-        
+        #manage tokens
         for x in range(len(tokens)):
             if(u1.gameRect.colliderect(tokens[x])):
                 tokens.pop(x)
                 u1.gotToken = True
+        
+        #hardcoded to 1 since this will always be the finish zone
+        if(u1.gameRect.colliderect(startFinish[1])):
+            if(u1.gotToken == True):
+                print("You win!")
+                self.winner = True
+
+
+        
