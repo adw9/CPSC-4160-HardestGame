@@ -44,12 +44,6 @@ finishY = 0
 startFinish.append(pygame.Rect(startX, startY, 100, 200))
 startFinish.append(pygame.Rect(finishX, finishY, 100, 200))
 
-
-startFinish.append(startX)
-startFinish.append(startY)
-startFinish.append(finishX)
-startFinish.append(finishY)
-
 #set token, read from file
 tokenX = 200
 tokenY = 200
