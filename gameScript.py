@@ -46,6 +46,12 @@ startFinish.append(startY)
 startFinish.append(finishX)
 startFinish.append(finishY)
 
+#set token, read from file
+tokenX = 200
+tokenY = 200
+tokens.append(tokenX)
+tokens.append(tokenY)
+
 
 
 
@@ -59,5 +65,5 @@ while True:
     
     controller.userInput(u1)
     controller.collisionDetection(u1,obstacles)
-    obj.viewUpdate(u1,obstacles,startFinish)   
+    obj.viewUpdate(u1,obstacles,startFinish,tokens)   
 

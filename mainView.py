@@ -13,7 +13,7 @@ class View():
       pygame.display.set_caption("Worlds easiest game?")
       surface = pygame.display.set_mode(self.SCREEN_SIZE)
 
-   def viewUpdate(self, u1,obstacles,startFinish):
+   def viewUpdate(self, u1,obstacles,startFinish, tokens):
       #background
       self.surface.fill(self.screenColor)
       #draw the ball
@@ -27,6 +27,10 @@ class View():
 
       startRect = pygame.Rect(startFinish[2], startFinish[3], 100, 200)
       pygame.draw.rect(self.surface, (0,255,0), startRect)
+
+      #tokens
+      tokenRect = pygame.Rect(tokens[0],tokens[1],20,20)
+      pygame.draw.rect(self.surface,(255,255,0),tokenRect)
 
 
       #user square

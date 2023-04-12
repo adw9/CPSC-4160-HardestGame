@@ -36,3 +36,5 @@ class Player():
     def reset_player(self):
         self.rectY = 400
         self.rectX = 0
+        self.gameRect = pygame.Rect(self.rectX, self.rectY, self.rectWidth, self.rectHeight)
+
