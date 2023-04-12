@@ -37,8 +37,4 @@ class View():
       pygame.display.update()
 
 
-      #temp statement
-      if(u1.gotToken == True):
-         print("yay!")
-
 
