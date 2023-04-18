@@ -71,6 +71,10 @@ class mainController():
                     
                 case 2:
                     u1.gotSpeed = True
+            #cant figure out how to not crash after popping it off the stack like tokens, so just hide it off screen
+            powerup.pop()
+            powerup.pop()
+            powerup.append(pygame.Rect(2000,2000,20,20))
 
 
 

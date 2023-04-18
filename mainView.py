@@ -29,13 +29,14 @@ class View():
       #tokens
       for x in range(len(tokens)):
          pygame.draw.rect(self.surface,(255,255,0),tokens[x])
+      
+      #powerup
+      pygame.draw.rect(self.surface,(0,0,255),powerup[0])
 
 
       #user square
       pygame.draw.rect(self.surface, u1.rectColor, u1.gameRect)
 
-      pygame.draw.rect(self.surface, (0,0,255),powerup[0])
-   
       pygame.display.update()
 
 
