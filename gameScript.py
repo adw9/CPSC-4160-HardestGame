@@ -77,7 +77,7 @@ while True:
     
     controller.userInput(u1)
     controller.collisionDetection(u1,obstacles,startFinish,tokens,powerup)
-    obj.viewUpdate(u1,obstacles,startFinish,tokens)   
+    obj.viewUpdate(u1,obstacles,startFinish,tokens,powerup)   
 
     if(controller.winner == True):
         pygame.quit() 

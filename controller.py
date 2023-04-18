@@ -64,7 +64,7 @@ class mainController():
                 self.winner = True
 
         #hardcoded to 0 since there will always be a single powerup
-        if(u1.gameRect.colliderrect(powerup[0])):
+        if(u1.gameRect.colliderect(powerup[0])):
             match powerup[1]:
                 case 1:
                     u1.gotShield = True
