@@ -8,6 +8,8 @@ class Player():
     rectSpeed = 0
 
     gotToken = False
+    gotShield = False
+    gotSpeed = False
 
     SCREEN_HEIGHT = 0
 

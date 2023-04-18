@@ -30,7 +30,7 @@ class mainController():
             input = "RIGHT"
             u1.move_rect(input)
 
-    def collisionDetection(self, u1, obstacles,startFinish,tokens):
+    def collisionDetection(self, u1, obstacles,startFinish,tokens,powerup):
         
 
         #manage obstacles
@@ -62,6 +62,16 @@ class mainController():
             if(u1.gotToken == True):
                 print("You win!")
                 self.winner = True
+
+        #hardcoded to 0 since there will always be a single powerup
+        if(u1.gameRect.colliderrect(powerup[0])):
+            match powerup[1]:
+                case 1:
+                    u1.gotShield = True
+                    
+                case 2:
+                    u1.gotSpeed = True
+
 
 
         

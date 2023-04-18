@@ -22,6 +22,10 @@ startFinish = []
 #this stores the one/multiple tokens to collect
 tokens = []
 
+#this stores powerup data
+powerup = []
+
+
 #loop this for the needed number of obstacles, read from file
 for x in range(4):
     obstacles.append(Ball())
@@ -49,6 +53,16 @@ tokenY = 200
 
 tokens.append(pygame.Rect(tokenX,tokenY,20,20))
 
+#set powerup, read from file
+powerupX = 200
+powerupY = 400
+powerupType = 1
+
+powerup.append(pygame.Rect(powerupX,powerupY,20,20))
+
+#type 1 is shield, type 2 is speed?
+powerup.append(powerupType)
+
 
 
 
@@ -62,7 +76,7 @@ while True:
             sys.exit()
     
     controller.userInput(u1)
-    controller.collisionDetection(u1,obstacles,startFinish,tokens)
+    controller.collisionDetection(u1,obstacles,startFinish,tokens,powerup)
     obj.viewUpdate(u1,obstacles,startFinish,tokens)   
 
     if(controller.winner == True):
