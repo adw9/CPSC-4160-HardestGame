@@ -1,6 +1,6 @@
 # CPSC-4160-HardestGame
 
-Milestone 1 CPSC 4160
+Milestone 2 CPSC 4160
 https://github.com/adw9/CPSC-4160-HardestGame
 # Part 1: Updates to Game Document
 • The game and current development design have not updated since the original project proposal.
@@ -25,14 +25,14 @@ o A separate file to read from level files may be created, otherwise this is don
 
 • Level design – 8 hours
 
-• Collision/Reset from hitting obstacles – 1 hour (95% Done)
+• Collision/Reset from hitting obstacles – 1 hour (100% Done)
 
 o A bug where the reset doesn’t occur until another player input is logged has not been
 fixed, otherwise this is done.
 
 • Player movement - <1 hour (100% Done) - Speed may be adjusted after levels are designed
 
-• Powerup implementation – 1 hour (50% Done)
+• Powerup implementation – 1 hour (100% Done)
 -This will be easier than expected, adjusting it from 2 hours to 1 hour. Most code will be
 reusable from collision code
 
@@ -48,26 +48,20 @@ Milestone 1: March 30
 
 • Collision/Reset completed – March 12
 
-• Player Movement – March 12
+• Player Movement completed – March 12
 
-• Updated Game Document – March 14
+• Updated Game Document completed – March 14
 
 Milestone 2: April 12
 
-• Powerup implementation – March 22
-
-• Implementation of separate level files – March 25
-
-• Atleast 5 levels – March 28
-
-• Updated Game Document – March 28
-
-• Main menu implementation – April 10
-
-• Updated Game Document – April 11
+• Powerup implementation completed – March 22
+• Updated Game Document  completed – April 11
 
 Final Game Submission: April 26
 
+• Atleast 5 levels – March 28
+• Implementation of separate level files – March 25
+• Main menu implementation – April 10
 • Polished game, fix misc. bugs – April 20
 
 • Completed Game Document – April 24
@@ -82,6 +76,6 @@ features being developed before levels are introduced. The potential for a major
 there, and must be avoided to keep development time low. Reading level data should be the next
 feature developed so that the rest of the project can work around its constraints. Level data will likely be
 stored in a simple .txt file, not an efficient solution but one that works for this project.
-The other technical difficulty is a simple bug regarding player collisions with obstacles. The player sprite
-is not updated when a collision happens, but only later when the player inputs any movement
-command. This is odd, and will be resolved during the next sprint. 
+
+
+
