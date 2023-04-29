@@ -70,7 +70,7 @@ class mainController():
                     u1.gotShield = True
                     
                 case 2:
-                    u1.gotSpeed = True
+                    u1.speedPowerup()
             #cant figure out how to not crash after popping it off the stack like tokens, so just hide it off screen
             powerup.pop()
             powerup.pop()

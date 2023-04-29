@@ -31,7 +31,13 @@ class View():
          pygame.draw.rect(self.surface,(255,255,0),tokens[x])
       
       #powerup
-      pygame.draw.rect(self.surface,(0,0,255),powerup[0])
+
+      match powerup[len(powerup)-1]:
+         case 1:
+            pygame.draw.rect(self.surface,(0,0,255),powerup[0])
+         case 2:
+            pygame.draw.rect(self.surface,(255,255,255),powerup[0])
+      
 
 
       #user square

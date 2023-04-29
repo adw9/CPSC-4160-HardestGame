@@ -56,7 +56,7 @@ tokens.append(pygame.Rect(tokenX,tokenY,20,20))
 #set powerup, read from file
 powerupX = 200
 powerupY = 400
-powerupType = 1
+powerupType = 2
 
 powerup.append(pygame.Rect(powerupX,powerupY,20,20))
 
