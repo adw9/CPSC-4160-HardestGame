@@ -46,8 +46,13 @@ class mainController():
             elif(obstacles[x].gameRect.colliderect(self.botWall)):
                 obstacles[x].moveDown = False
 
+            #ball hit user
             if(obstacles[x].gameRect.colliderect(u1.gameRect)):
-                u1.reset_player()
+                
+                if(u1.shield > 0):
+                    u1.shield -= 1
+                else:
+                    u1.reset_player()
 
             obstacles[x].move_ball()
 
@@ -67,7 +72,7 @@ class mainController():
         if(u1.gameRect.colliderect(powerup[0])):
             match powerup[1]:
                 case 1:
-                    u1.gotShield = True
+                    u1.shield = 500
                     
                 case 2:
                     u1.speedPowerup()

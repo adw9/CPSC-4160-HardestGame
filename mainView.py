@@ -43,6 +43,10 @@ class View():
       #user square
       pygame.draw.rect(self.surface, u1.rectColor, u1.gameRect)
 
+      if(u1.shield > 0):
+         tempRect = pygame.Rect(u1.rectX+13, u1.rectY+13, 20, 20)
+         pygame.draw.rect(self.surface, (0,0,255), tempRect)
+
       pygame.display.update()
 
 
