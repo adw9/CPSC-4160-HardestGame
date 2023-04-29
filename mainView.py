@@ -44,7 +44,7 @@ class View():
       pygame.draw.rect(self.surface, u1.rectColor, u1.gameRect)
 
       if(u1.shield > 0):
-         tempRect = pygame.Rect(u1.rectX+13, u1.rectY+13, 20, 20)
+         tempRect = pygame.Rect(u1.rectX+10, u1.rectY+10, 30, 30)
          pygame.draw.rect(self.surface, (0,0,255), tempRect)
 
       pygame.display.update()

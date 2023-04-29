@@ -72,7 +72,7 @@ class mainController():
         if(u1.gameRect.colliderect(powerup[0])):
             match powerup[1]:
                 case 1:
-                    u1.shield = 500
+                    u1.shield = 1500
                     
                 case 2:
                     u1.speedPowerup()
