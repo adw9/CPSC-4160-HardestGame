@@ -1,8 +1,7 @@
 levelFormat 
 
-line 1:
-[StartX.StartY.FinishX.FinishY]
-line 2:
-[tokenX.tokenY]
-line 3:
-[powerupX.powerupY.powerupType]
+[L1.StartX.StartY.FinishX.FinishY]
+
+[L2.tokenX.tokenY]
+
+[L3.powerupX.powerupY.powerupType]
