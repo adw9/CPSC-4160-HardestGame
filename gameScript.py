@@ -4,6 +4,7 @@ from mainView import View
 from player import Player
 from controller import mainController
 from ball import Ball
+from game import Game
 
 lvlDict = {
 1 : "L1.txt",
@@ -13,13 +14,12 @@ lvlDict = {
 5 : "L5.txt"
 }
 
-
-
 #Startup, create objects
 pygame.init()
 obj = View()
 u1 = Player()
 controller = mainController()
+game = Game()
 
 
 #this stores the red balls that kill the player
@@ -53,6 +53,15 @@ powerupX = 200
 powerupY = 400
 powerupType = 1
 
+testv = 5
+#FILE READING TIME
+
+
+
+
+
+
+
 for x in range(numObstacles):
     obstacles.append(Ball())
 
@@ -84,8 +93,8 @@ while True:
             sys.exit()
     
     controller.userInput(u1)
-    controller.collisionDetection(u1,obstacles,startFinish,tokens,powerup)
-    obj.viewUpdate(u1,obstacles,startFinish,tokens,powerup)   
+    controller.collisionDetection(u1,game.obstacles,game.startFinish,game.tokens,game.powerup)
+    obj.viewUpdate(u1,game.obstacles,game.startFinish,game.tokens,game.powerup)   
 
     if(controller.winner == True):
         pygame.quit() 
