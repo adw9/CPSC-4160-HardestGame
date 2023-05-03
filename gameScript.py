@@ -38,7 +38,10 @@ while True:
 
     if(controller.winner == True):
         levelKey += 1
-        
-        pygame.quit() 
-        sys.exit()
+        game = Game()
+        game.fileReader(lvlDict[levelKey])
+
+        if(levelKey > 5):
+            pygame.quit() 
+            sys.exit()
 
