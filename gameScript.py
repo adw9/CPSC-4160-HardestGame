@@ -41,10 +41,11 @@ for x in range(4):
 
 
 obstacleOffset = 200
+obstacleY = 50
 #loop this to set start pos for balls, read from file
 for x in range(len(obstacles)):
     
-    obstacles[x].setStartPos(obstacleOffset,50)
+    obstacles[x].setStartPos(obstacleOffset,obstacleY)
     obstacleOffset += 100
 
 #set start/finish zones, read from file
