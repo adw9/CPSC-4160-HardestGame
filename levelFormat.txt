@@ -1,5 +1,7 @@
 levelFormat 
 
+[L0.numObstacles.obstacleOffset.obstacleY]
+
 [L1.StartX.StartY.FinishX.FinishY]
 
 [L2.tokenX.tokenY]
