@@ -5,6 +5,15 @@ from player import Player
 from controller import mainController
 from ball import Ball
 
+lvlDict = {
+1 : "L1.txt",
+2 : "L2.txt",
+3 : "L3.txt",
+4 : "L4.txt",
+5 : "L5.txt"
+}
+
+
 
 #Startup, create objects
 pygame.init()
