@@ -23,6 +23,7 @@ game = Game()
 levelKey = 1
 
 
+game.fileReader(lvlDict[levelKey])
 
 #game Loop
 while True:

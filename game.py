@@ -32,38 +32,45 @@ class Game():
     powerupX = 200
     powerupY = 400
     powerupType = 1
-
-    testv = 5
-#FILE READING TIME
-
-
-
-
-
-
-
-    for x in range(numObstacles):
-        obstacles.append(Ball())
-
-    for x in range(len(obstacles)):
     
-        obstacles[x].setStartPos(obstacleOffset,obstacleY)
-        obstacleOffset += 100
+    def fileReader(self,fileName):
+        with open(fileName, 'r') as f:
+            for line in f:
+                data = line.split(".")
 
-    startFinish.append(pygame.Rect(startX, startY, 100, 200))
-    startFinish.append(pygame.Rect(finishX, finishY, 100, 200))
+                match data[0]:
+                    case "L0":
+                        self.numObstacles = int(data[1])
+                        self.obstacleOffset = int(data[2])
+                        self.obstacleY = int(data[3])
+                    case "L1":
+                        self.startX = int(data[1])
+                        self.startY = int(data[2])
+                        self.finishX = int(data[3])
+                        self.finishY = int(data[4])
+                    case "L2":
+                        self.tokenX = int(data[1])
+                        self.tokenY = int(data[2])
+                    case "L3":
+                        self.powerupX = int(data[1])
+                        self.powerupY = int(data[2])
+                        self.powerupType = int(data[3])
+        for x in range(self.numObstacles):
+            self.obstacles.append(Ball())
 
-    tokens.append(pygame.Rect(tokenX,tokenY,20,20))
+        for x in range(len(self.obstacles)):
+    
+            self.obstacles[x].setStartPos(self.obstacleOffset,self.obstacleY)
+            self.obstacleOffset += 100
 
-    powerup.append(pygame.Rect(powerupX,powerupY,20,20))
+        self.startFinish.append(pygame.Rect(self.startX, self.startY, 100, 200))
+        self.startFinish.append(pygame.Rect(self.finishX, self.finishY, 100, 200))
+
+        self.tokens.append(pygame.Rect(self.tokenX,self.tokenY,20,20))
+
+        self.powerup.append(pygame.Rect(self.powerupX,self.powerupY,20,20))
 
 #type 1 is shield, type 2 is speed?
-    powerup.append(powerupType)
+        self.powerup.append(self.powerupType)
 
-
-
-
-
-
-
-
+        
