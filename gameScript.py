@@ -35,38 +35,36 @@ tokens = []
 powerup = []
 
 
-#loop this for the needed number of obstacles, read from file
-for x in range(4):
-    obstacles.append(Ball())
 
-
+#all of these should read from file
+numObstacles = 4
 obstacleOffset = 200
 obstacleY = 50
-#loop this to set start pos for balls, read from file
-for x in range(len(obstacles)):
-    
-    obstacles[x].setStartPos(obstacleOffset,obstacleY)
-    obstacleOffset += 100
 
-#set start/finish zones, read from file
 startX = 0
 startY = 300
 finishX = 600
 finishY = 0
 
-startFinish.append(pygame.Rect(startX, startY, 100, 200))
-startFinish.append(pygame.Rect(finishX, finishY, 100, 200))
-
-#set token, read from file
 tokenX = 200
 tokenY = 200
 
-tokens.append(pygame.Rect(tokenX,tokenY,20,20))
-
-#set powerup, read from file
 powerupX = 200
 powerupY = 400
 powerupType = 1
+
+for x in range(numObstacles):
+    obstacles.append(Ball())
+
+for x in range(len(obstacles)):
+    
+    obstacles[x].setStartPos(obstacleOffset,obstacleY)
+    obstacleOffset += 100
+
+startFinish.append(pygame.Rect(startX, startY, 100, 200))
+startFinish.append(pygame.Rect(finishX, finishY, 100, 200))
+
+tokens.append(pygame.Rect(tokenX,tokenY,20,20))
 
 powerup.append(pygame.Rect(powerupX,powerupY,20,20))
 
