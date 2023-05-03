@@ -34,6 +34,7 @@ class Game():
     powerupType = 1
     
     def fileReader(self,fileName):
+        print("START FILE: ",self.obstacles)
         with open(fileName, 'r') as f:
             for line in f:
                 data = line.split(".")

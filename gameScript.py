@@ -39,7 +39,9 @@ while True:
     if(controller.winner == True):
         levelKey += 1
         game = Game()
+        u1 = Player()
         game.fileReader(lvlDict[levelKey])
+        controller.winner = False
 
         if(levelKey > 5):
             pygame.quit() 
