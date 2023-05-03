@@ -40,7 +40,11 @@ class Player():
         self.rectY = 400
         self.rectX = 0
         self.gameRect = pygame.Rect(self.rectX, self.rectY, self.rectWidth, self.rectHeight)
+        self.rectSpeed = .5
+        self.shield = 0
+        
 
     def speedPowerup(self):
         self.rectSpeed = .75
+
 

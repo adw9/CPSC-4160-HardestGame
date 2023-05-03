@@ -34,7 +34,7 @@ class Game():
     powerupType = 1
     
     def fileReader(self,fileName):
-        print("START FILE: ",self.obstacles)
+       
         with open(fileName, 'r') as f:
             for line in f:
                 data = line.split(".")
@@ -74,4 +74,13 @@ class Game():
 #type 1 is shield, type 2 is speed?
         self.powerup.append(self.powerupType)
 
+    def resetGame(self):
+        for x in range(len(self.obstacles)):
+            self.obstacles.pop()
+        for x in range(len(self.startFinish)):
+            self.startFinish.pop()
+        for x in range(len(self.tokens)):
+            self.tokens.pop()
+        for x in range(len(self.powerup)):
+            self.powerup.pop()
         
