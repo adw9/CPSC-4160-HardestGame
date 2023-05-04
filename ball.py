@@ -57,4 +57,6 @@ class Ball():
 
         #update gameRect, not sure if I have to actually do this
         self.gameRect = pygame.Rect(self.ballX, self.ballY, self.rectWidth, self.rectHeight)
+    def setSpeed(self, speed):
+        self.speedY = speed
         
