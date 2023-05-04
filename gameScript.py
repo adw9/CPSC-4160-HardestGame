@@ -42,7 +42,7 @@ while True:
         game = Game()
         u1 = Player()
         game.resetGame()
-        if(levelkey <=5):
+        if(levelKey <=5):
             game.fileReader(lvlDict[levelKey])
         controller.winner = False
         u1.reset_player()
