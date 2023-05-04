@@ -24,6 +24,7 @@ levelKey = 1
 
 
 game.fileReader(lvlDict[levelKey])
+u1.setSpawn(game.startX,game.startY)
 
 #game Loop
 while True:
@@ -44,6 +45,7 @@ while True:
         game.fileReader(lvlDict[levelKey])
         controller.winner = False
         u1.reset_player()
+        u1.setSpawn(game.startX,game.startY)
 
         if(levelKey > 5):
             pygame.quit() 

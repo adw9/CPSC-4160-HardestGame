@@ -7,6 +7,9 @@ class Player():
     rectPos = rectX, rectY = 0, 0
     rectSpeed = 0
 
+    spawnX = 0
+    spawnY = 0
+
     gotToken = False
     shield = 0
 
@@ -37,12 +40,15 @@ class Player():
         self.gameRect = pygame.Rect(self.rectX, self.rectY, self.rectWidth, self.rectHeight)
 
     def reset_player(self):
-        self.rectY = 400
-        self.rectX = 0
+        self.rectY = self.spawnY
+        self.rectX = self.spawnX
         self.gameRect = pygame.Rect(self.rectX, self.rectY, self.rectWidth, self.rectHeight)
         self.rectSpeed = .5
         self.shield = 0
-        
+
+    def setSpawn(self,spX,spY):
+        self.spawnX = spX
+        self.spawnY = spY
 
     def speedPowerup(self):
         self.rectSpeed = .75
