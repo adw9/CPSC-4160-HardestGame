@@ -10,7 +10,7 @@ class View():
 
 
    def __init__(self):
-      pygame.display.set_caption("Worlds easiest game?")
+      pygame.display.set_caption("Worlds Easiest Game!")
       surface = pygame.display.set_mode(self.SCREEN_SIZE)
 
    def viewUpdate(self, u1,obstacles,startFinish, tokens,powerup):
