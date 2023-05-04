@@ -20,6 +20,7 @@ class Game():
     numObstacles = 4
     obstacleOffset = 200
     obstacleY = 50
+    ballSpeed = .05
 
     startX = 0
     startY = 300
@@ -44,6 +45,7 @@ class Game():
                         self.numObstacles = int(data[1])
                         self.obstacleOffset = int(data[2])
                         self.obstacleY = int(data[3])
+                        self.ballSpeed = float("."+data[4])
                     case "L1":
                         self.startX = int(data[1])
                         self.startY = int(data[2])
@@ -58,6 +60,7 @@ class Game():
                         self.powerupType = int(data[3])
         for x in range(self.numObstacles):
             self.obstacles.append(Ball())
+            self.obstacles[x].setSpeed(self.ballSpeed)
 
         for x in range(len(self.obstacles)):
     
