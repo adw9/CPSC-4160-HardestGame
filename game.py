@@ -18,7 +18,7 @@ class Game():
 
 #all of these should read from file
     numObstacles = 4
-    obstacleOffset = 200
+    obstacleX = 200
     obstacleY = 50
     ballSpeed = .05
 
@@ -64,8 +64,8 @@ class Game():
 
         for x in range(len(self.obstacles)):
     
-            self.obstacles[x].setStartPos(self.obstacleOffset,self.obstacleY)
-            self.obstacleOffset += 100
+            self.obstacles[x].setStartPos(self.obstacleX,self.obstacleY)
+            self.obstacleX += self.obstacleOffset
 
         self.startFinish.append(pygame.Rect(self.startX, self.startY, 100, 200))
         self.startFinish.append(pygame.Rect(self.finishX, self.finishY, 100, 200))
